@@ -1,17 +1,33 @@
 import React from 'react';
-import './HomePage.css'; // Make sure to create and link this CSS file
+import { useNavigate } from 'react-router-dom';
+import '../css/HomePage.css';
 
-/**
- * The HomePage component.
- * @param {object} props - The props for the component.
- * @param {function} props.onNavigateToLogin - A function to call when the login button is clicked.
- */
-export default function HomePage({ onNavigateToLogin }) {
+function HomePage() {
+  // Get the navigate function from the router
+  const navigate = useNavigate();
+
+  /**
+   * This function handles the navigation to the login page.
+   * It's called when the user clicks the login button.
+   */
+  const handleNavigateToLogin = () => {
+    navigate('/login');
+  };
+
   return (
     <div className="homepage-container">
-      <h1>Welcome to Your School Portal</h1>
-      <p>Please Login to Continue</p>
-      <button onClick={onNavigateToLogin}>Login</button>
+      <header className="homepage-header">
+        <h1>PSTH</h1>
+        <p>PSTH an online platform that provides a comprehensive and user-friendly experience for both students and teachers.</p>
+      </header>
+      <main className="homepage-main">
+        {/* The button now calls our new function on click */}
+        <button onClick={handleNavigateToLogin} className="homepage-login-button">
+          Login
+        </button>
+      </main>
     </div>
   );
 }
+
+export default HomePage;

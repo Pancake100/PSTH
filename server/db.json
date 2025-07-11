@@ -1,0 +1,36 @@
+{
+  "students": [
+    {
+      "id": "stu1",
+      "username": "student1",
+      "password": "password123",
+      "name": "Alex Doe",
+      "info": "Grade 10, Section B",
+      "avatarUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=AD"
+    },
+    {
+      "id": "stu2",
+      "username": "student2",
+      "password": "password123",
+      "name": "Casey Smith",
+      "info": "Grade 11, Section A",
+      "avatarUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=CS"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "t1",
+      "username": "teacher1",
+      "password": "password123",
+      "name": "Dr. Evelyn Reed",
+      "info": "Subject: Physics",
+      "avatarUrl": "https://placehold.co/100x100/D4EDDA/155724?text=ER"
+    }
+  ],
+  "books": [
+    { "id": "b1", "title": "The Laws of Thermodynamics", "author": "Peter Atkins" },
+    { "id": "b2", "title": "React Up & Running", "author": "Stoyan Stefanov" },
+    { "id": "b3", "title": "A Brief History of Time", "author": "Stephen Hawking" },
+    { "id": "b4", "title": "Node.js Design Patterns", "author": "Mario Casciaro" }
+  ]
+}
