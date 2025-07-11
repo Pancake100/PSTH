@@ -1,0 +1,74 @@
+{
+  "Maths": [
+    { "name": "Principles of Mathematics", "author": "Bertrand Russell", "year": 1903 },
+    { "name": "Calculus Made Easy", "author": "Silvanus P. Thompson", "year": 1910 },
+    { "name": "Linear Algebra Done Right", "author": "Sheldon Axler", "year": 1995 },
+    { "name": "Discrete Mathematics", "author": "Kenneth Rosen", "year": 2011 },
+    { "name": "The Joy of x", "author": "Steven Strogatz", "year": 2012 },
+    { "name": "Number Theory", "author": "George E. Andrews", "year": 1971 },
+    { "name": "Algebra", "author": "Israel Gelfand", "year": 1990 },
+    { "name": "Mathematics: Its Content", "author": "A.D. Aleksandrov", "year": 1956 },
+    { "name": "A Mathematician’s Apology", "author": "G.H. Hardy", "year": 1940 },
+    { "name": "Mathematical Methods", "author": "George Arfken", "year": 1985 }
+  ],
+  "English": [
+    { "name": "To Kill a Mockingbird", "author": "Harper Lee", "year": 1960 },
+    { "name": "1984", "author": "George Orwell", "year": 1949 },
+    { "name": "Pride and Prejudice", "author": "Jane Austen", "year": 1813 },
+    { "name": "Jane Eyre", "author": "Charlotte Brontë", "year": 1847 },
+    { "name": "The Great Gatsby", "author": "F. Scott Fitzgerald", "year": 1925 },
+    { "name": "Wuthering Heights", "author": "Emily Brontë", "year": 1847 },
+    { "name": "The Scarlet Letter", "author": "Nathaniel Hawthorne", "year": 1850 },
+    { "name": "The Grapes of Wrath", "author": "John Steinbeck", "year": 1939 },
+    { "name": "Brave New World", "author": "Aldous Huxley", "year": 1932 },
+    { "name": "The Catcher in the Rye", "author": "J.D. Salinger", "year": 1951 }
+  ],
+  "Science": [
+    { "name": "A Brief History of Time", "author": "Stephen Hawking", "year": 1988 },
+    { "name": "Cosmos", "author": "Carl Sagan", "year": 1980 },
+    { "name": "The Selfish Gene", "author": "Richard Dawkins", "year": 1976 },
+    { "name": "The Origin of Species", "author": "Charles Darwin", "year": 1859 },
+    { "name": "The Elegant Universe", "author": "Brian Greene", "year": 1999 },
+    { "name": "The Gene", "author": "Siddhartha Mukherjee", "year": 2016 },
+    { "name": "Astrophysics for People", "author": "Neil deGrasse Tyson", "year": 2017 },
+    { "name": "Sapiens", "author": "Yuval Noah Harari", "year": 2011 },
+    { "name": "Scientific Revolutions", "author": "Thomas Kuhn", "year": 1962 },
+    { "name": "Silent Spring", "author": "Rachel Carson", "year": 1962 }
+  ],
+  "Biology": [
+    { "name": "Molecular Biology of the Cell", "author": "Bruce Alberts", "year": 1983 },
+    { "name": "The Cell", "author": "Geoffrey M. Cooper", "year": 1997 },
+    { "name": "Biology", "author": "Campbell & Reece", "year": 1987 },
+    { "name": "Genetics", "author": "Hartl & Jones", "year": 1998 },
+    { "name": "Essential Cell Biology", "author": "Bruce Alberts", "year": 1998 },
+    { "name": "Principles of Genetics", "author": "Snustad & Simmons", "year": 2002 },
+    { "name": "Developmental Biology", "author": "Scott F. Gilbert", "year": 1985 },
+    { "name": "Human Physiology", "author": "Stuart Fox", "year": 1996 },
+    { "name": "Neuroscience", "author": "Mark Bear", "year": 1996 },
+    { "name": "Immunobiology", "author": "Janeway et al.", "year": 1999 }
+  ],
+  "Chemistry": [
+    { "name": "The Disappearing Spoon", "author": "Sam Kean", "year": 2010 },
+    { "name": "Principles of Chemistry", "author": "Linus Pauling", "year": 1947 },
+    { "name": "Organic Chemistry", "author": "Paula Bruice", "year": 2001 },
+    { "name": "Inorganic Chemistry", "author": "Gary Miessler", "year": 1991 },
+    { "name": "The Central Science", "author": "Brown et al.", "year": 1977 },
+    { "name": "Physical Chemistry", "author": "Peter Atkins", "year": 1990 },
+    { "name": "Molecules", "author": "Theodore Gray", "year": 2014 },
+    { "name": "The Elements", "author": "Theodore Gray", "year": 2009 },
+    { "name": "Chemical Principles", "author": "Zumdahl", "year": 2004 },
+    { "name": "Descriptive Inorganic Chemistry", "author": "Rayner-Canham", "year": 2000 }
+  ],
+  "History": [
+    { "name": "Guns, Germs, and Steel", "author": "Jared Diamond", "year": 1997 },
+    { "name": "A People’s History", "author": "Howard Zinn", "year": 1980 },
+    { "name": "Sapiens", "author": "Yuval Noah Harari", "year": 2011 },
+    { "name": "Ancient World", "author": "Susan Bauer", "year": 2007 },
+    { "name": "The Silk Roads", "author": "Peter Frankopan", "year": 2015 },
+    { "name": "The Crusades", "author": "Thomas Asbridge", "year": 2010 },
+    { "name": "The Third Reich", "author": "William Shirer", "year": 1960 },
+    { "name": "Wright Brothers", "author": "David McCullough", "year": 2015 },
+    { "name": "Short History of Everything", "author": "Bill Bryson", "year": 2003 },
+    { "name": "Diary of a Young Girl", "author": "Anne Frank", "year": 1947 }
+  ]
+}
