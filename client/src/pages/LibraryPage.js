@@ -2,7 +2,7 @@ import React from 'react';
 
 const subjects = ['Maths', 'English', 'Science', 'Biology', 'Chemistry', 'History'];
 
-const Library = () => {
+const LibraryPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
       <h1 className="text-4xl font-bold mb-8 text-center">Library</h1>
@@ -20,4 +20,4 @@ const Library = () => {
   );
 };
 
-export default Library;
+export default LibraryPage;

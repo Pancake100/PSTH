@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BookOpen, Calendar, Edit, User, LogOut, ChevronLeft, Menu, Settings, ChevronUp } from 'lucide-react';
-import './UserPage.css'; 
+import '../css/UserPage.css'; 
 
 
 const studentData = {
