@@ -11,6 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 const dbPath = path.join(__dirname, 'db.json');
+const libraryPath = path.join(__dirname, 'Library_db.json'); // 🔹 ADD THIS
 
 // --- API Endpoints ---
 
@@ -22,8 +23,7 @@ app.post('/api/login', async (req, res) => {
     const data = await fs.readFile(dbPath, 'utf8');
     const db = JSON.parse(data);
 
-    // Use a more robust way to access the user list
-    const userListKey = role && `${role.toLowerCase()}s`; // "student" -> "students"
+    const userListKey = role && `${role.toLowerCase()}s`;
     const userList = db[userListKey];
 
     if (!userList) {
@@ -44,16 +44,50 @@ app.post('/api/login', async (req, res) => {
   }
 });
 
-// Books Endpoint
+// Existing Book Endpoint (from db.json, not library)
 app.get('/api/books', async (req, res) => {
-    try {
-        const data = await fs.readFile(dbPath, 'utf8');
-        const db = JSON.parse(data);
-        res.json(db.books || []);
-    } catch (error) {
-        console.error("Error fetching books:", error);
-        res.status(500).json({ message: "Internal server error" });
+  try {
+    const data = await fs.readFile(dbPath, 'utf8');
+    const db = JSON.parse(data);
+    res.json(db.books || []);
+  } catch (error) {
+    console.error("Error fetching books:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
+
+
+// --- 7/11 New Library Endpoints ---
+
+// Get all library categories
+app.get('/api/library/categories', async (req, res) => {
+  try {
+    const data = await fs.readFile(libraryPath, 'utf8');
+    const library = JSON.parse(data);
+    const categories = Object.keys(library);
+    res.json(categories);
+  } catch (error) {
+    console.error("Error reading library categories:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
+
+// Get books by category
+app.get('/api/library/books/:category', async (req, res) => {
+  try {
+    const category = req.params.category;
+    const data = await fs.readFile(libraryPath, 'utf8');
+    const library = JSON.parse(data);
+
+    if (!library[category]) {
+      return res.status(404).json({ message: `Category '${category}' not found.` });
     }
+
+    res.json(library[category]);
+  } catch (error) {
+    console.error("Error fetching library books:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
 });
 
 // --- Server Startup ---
@@ -61,6 +95,5 @@ app.listen(port, () => {
   console.log(`Server is running successfully on http://localhost:${port}`);
   console.log('Waiting for requests... (Press CTRL+C to stop)');
 }).on('error', (err) => {
-  // Catch startup errors like "Port in use"
   console.error('Failed to start server:', err);
 });
