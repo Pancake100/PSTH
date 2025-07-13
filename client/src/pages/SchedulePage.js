@@ -31,7 +31,7 @@ export default function SchedulePage({ user }) {
                 setIsLoading(false);
             }
         };
-        
+
         fetchBookings();
     }, [user]);
 
@@ -46,7 +46,7 @@ export default function SchedulePage({ user }) {
                 <Link to="/dashboard" className="back-button">
                     <ChevronLeft /> Dashboard
                 </Link>
-                <h1>My Schedule</h1>
+                <h1 className="section-header">My Schedule</h1>
             </div>
             <div className="schedule-list">
                 {error && <p className="error-message">{error}</p>}
@@ -57,7 +57,7 @@ export default function SchedulePage({ user }) {
                             <p><strong>Date:</strong> {booking.date}</p>
                             <p><strong>Time:</strong> {booking.time}</p>
                             <p>
-                                <strong>{user.role === 'teacher' ? 'Student:' : 'Teacher:'}</strong> 
+                                <strong>{user.role === 'teacher' ? 'Student:' : 'Teacher:'}</strong>
                                 {user.role === 'teacher' ? booking.studentName : booking.teacherName}
                             </p>
                         </div>

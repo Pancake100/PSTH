@@ -82,7 +82,7 @@ export default function LibraryPage() {
                 <Link to="/dashboard" className="back-button">
                     <ChevronLeft /> Dashboard
                 </Link>
-                <h1>Library</h1>
+                <h1 className="section-header">Library</h1>
             </div>
 
             {isLoading && <p style={{ textAlign: 'center' }}>Loading subjects...</p>}

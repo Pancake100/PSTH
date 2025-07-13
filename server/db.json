@@ -1,9 +1,28 @@
 {
   "students": [
-    { "id": "stu1", "username": "student1", "password": "password123", "name": "Alex Doe", "grade": 10, "info": "Grade 10", "avatarUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=AD" }
+    {
+      "id": "stu1",
+      "username": "student1",
+      "password": "password123",
+      "name": "Alex Doe",
+      "grade": 10,
+      "info": "Grade 10",
+      "avatarUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=AD"
+    }
   ],
   "teachers": [
-    { "id": "t1", "username": "teacher1", "password": "password123", "name": "Dr. Evelyn Reed", "subjects": ["Physics", "Maths"], "info": "Teaches: Physics, Maths", "avatarUrl": "https://placehold.co/100x100/D4EDDA/155724?text=ER" }
+    {
+      "id": "t1",
+      "username": "teacher1",
+      "password": "password123",
+      "name": "Dr. Evelyn Reed",
+      "subjects": [
+        "Physics",
+        "Maths"
+      ],
+      "info": "Teaches: Physics, Maths",
+      "avatarUrl": "https://placehold.co/100x100/D4EDDA/155724?text=ER"
+    }
   ],
   "library": {
     "Maths": [
@@ -382,6 +401,14 @@
       "date": "2025-07-16",
       "time": "11:00 AM",
       "booked": true
+    },
+    {
+      "id": "d834fb24-c3a3-4cf9-8508-b8de80e8d884",
+      "teacherId": "t1",
+      "teacherName": "Dr. Evelyn Reed",
+      "date": "2025-07-17",
+      "time": "20:00",
+      "booked": false
     }
   ],
   "bookings": [

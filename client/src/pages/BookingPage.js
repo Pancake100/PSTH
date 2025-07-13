@@ -10,7 +10,7 @@ export default function BookingPage({ user }) {
                 <Link to="/dashboard" className="back-button">
                     <ChevronLeft /> Dashboard
                 </Link>
-                <h1>Booking</h1>
+                <h1 className="section-header">Booking</h1>
             </div>
             {user.role === 'teacher' ? <TeacherBookingView user={user} /> : <StudentBookingView user={user} />}
         </div>

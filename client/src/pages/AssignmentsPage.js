@@ -21,7 +21,7 @@ export default function AssignmentsPage({ user }) {
         <div className="assignments-page-container">
             <div className="page-header">
                 <Link to="/dashboard" className="back-button"><ChevronLeft /> Dashboard</Link>
-                <h1>Assignments</h1>
+                <h1 className="section-header">Assignments</h1>
             </div>
             {user.role === 'teacher' ? <TeacherAssignmentsView /> : <StudentAssignmentsView user={user} />}
         </div>
