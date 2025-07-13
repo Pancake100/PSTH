@@ -18,7 +18,7 @@ const ConfirmationModal = ({ message, onConfirm, onCancel }) => (
 export default function AssignmentsPage({ user }) {
     if (!user) return <div>Loading...</div>;
     return (
-        <div className="page-container">
+        <div className="assignments-page-container">
             <div className="page-header">
                 <Link to="/dashboard" className="back-button"><ChevronLeft /> Dashboard</Link>
                 <h1>Assignments</h1>
@@ -149,14 +149,14 @@ const StudentAssignmentsView = ({ user }) => {
 
     const isSubmitted = (assignmentId) => submissions.some(s => s.assignmentId === assignmentId);
 
-    if (isLoading) return <p style={{textAlign: 'center'}}>Loading...</p>;
-    if (error) return <p className="error-message" style={{textAlign: 'center'}}>{error}</p>;
+    if (isLoading) return <p style={{ textAlign: 'center' }}>Loading...</p>;
+    if (error) return <p className="error-message" style={{ textAlign: 'center' }}>{error}</p>;
 
     return (
         <div className="student-view">
             <div className="subjects-sidebar">
                 <h3>Subjects</h3>
-                {subjects.map(s => <button key={s} onClick={() => setSelectedSubject(s)} className={`subject-button ${selectedSubject === s ? 'active' : ''}`}>{s}</button>)}
+                {subjects.map(s => <button key={s} onClick={() => setSelectedSubject(s)} className={`assignments-subject-button ${selectedSubject === s ? 'active' : ''}`}>{s}</button>)}
             </div>
             <div className="assignment-list-container">
                 {selectedSubject ? (

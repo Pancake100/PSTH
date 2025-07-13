@@ -37,11 +37,11 @@ export default function SchedulePage({ user }) {
 
     // Render different UI based on the state
     if (isLoading) {
-        return <div className="page-container"><h1>Loading schedule...</h1></div>;
+        return <div className="schedule-page-container"><h1>Loading schedule...</h1></div>;
     }
 
     return (
-        <div className="page-container">
+        <div className="schedule-page-container">
             <div className="page-header">
                 <Link to="/dashboard" className="back-button">
                     <ChevronLeft /> Dashboard

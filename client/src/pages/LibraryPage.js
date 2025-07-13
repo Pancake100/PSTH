@@ -30,11 +30,11 @@ export default function LibraryPage() {
 
         fetchLibraryData();
     }, []);
-    
+
     // View #3: Show the content of a selected book
     if (selectedBook) {
         return (
-            <div className="page-container">
+            <div className="library-page-container">
                 <button onClick={() => setSelectedBook(null)} className="back-button">
                     <ChevronLeft /> Back to Book List
                 </button>
@@ -53,7 +53,7 @@ export default function LibraryPage() {
     if (selectedSubject) {
         const books = libraryData[selectedSubject] || [];
         return (
-            <div className="page-container">
+            <div className="library-page-container">
                 <button onClick={() => setSelectedSubject(null)} className="back-button">
                     <ChevronLeft /> Back to Subjects
                 </button>
@@ -77,7 +77,7 @@ export default function LibraryPage() {
 
     // View #1 (Default): Show the grid of subjects
     return (
-        <div className="page-container">
+        <div className="library-page-container">
             <div className="page-header">
                 <Link to="/dashboard" className="back-button">
                     <ChevronLeft /> Dashboard
@@ -95,7 +95,7 @@ export default function LibraryPage() {
                             <button
                                 key={subject}
                                 onClick={() => setSelectedSubject(subject)}
-                                className="subject-button"
+                                className="library-subject-button"
                             >
                                 {subject}
                             </button>

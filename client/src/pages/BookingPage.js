@@ -5,7 +5,7 @@ import '../css/BookingPage.css';
 
 export default function BookingPage({ user }) {
     return (
-        <div className="page-container">
+        <div className="booking-page-container">
             <div className="page-header">
                 <Link to="/dashboard" className="back-button">
                     <ChevronLeft /> Dashboard
