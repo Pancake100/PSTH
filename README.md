@@ -1,6 +1,6 @@
 # DigitalAcademy Web Application
 
-This project is a web-based school portal created with the MERN stack (MongoDB, Express, React, Node.js). It provides separate interfaces for students and teachers to manage assignments, view library resources, and access their profiles.
+This project is a web-based school portal created with React and Node.js. It provides separate interfaces for students and teachers to manage assignments, view library resources, and access their profiles.
 
 ## Features
 
