@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-// Note: We are not using a dedicated CSS file for login in this structure,
-// but you can add one if you like.
+import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import '../css/LoginPage.css';
 
 export default function LoginPage({ onLogin }) {
   const [role, setRole] = useState("student");
@@ -12,61 +11,38 @@ export default function LoginPage({ onLogin }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(""); // Clear previous errors
-
+    setError("");
     try {
       const response = await fetch('http://localhost:5001/api/login', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ role, username, password }),
       });
-
       const data = await response.json();
-
       if (response.ok) {
-        // onLogin is passed from App.js to set the user state
         onLogin(data);
-        navigate('/dashboard'); // Navigate to dashboard on successful login
+        navigate('/dashboard');
       } else {
         setError(data.message || "Invalid credentials");
       }
     } catch (err) {
-      setError("Failed to connect to the server. Please try again later.");
-      console.error("Login fetch error:", err);
+      setError("Failed to connect to the server.");
     }
   };
 
   return (
     <div className="login-container">
-      <div className="header">
-        <div className="site-name">School Portal</div>
-        <div className="role-select">
-          <select value={role} onChange={(e) => setRole(e.target.value)}>
-            <option value="student">Student</option>
-            <option value="teacher">Teacher</option>
-          </select>
-        </div>
+      <div className="login-form-wrapper">
+        <h1 className="login-title">Welcome Back</h1>
+        <form className="login-form" onSubmit={handleSubmit}>
+          <div className="input-group"><label htmlFor="username">Username</label><input id="username" type="text" value={username} onChange={(e) => setUsername(e.target.value)} required /></div>
+          <div className="input-group"><label htmlFor="password">Password</label><input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required /></div>
+          <div className="input-group"><label htmlFor="role">Login as a...</label><select id="role" value={role} onChange={(e) => setRole(e.target.value)}><option value="student">Student</option><option value="teacher">Teacher</option></select></div>
+          <button type="submit" className="login-button">Login</button>
+          {error && <div className="error">{error}</div>}
+        </form>
+        <p className="signup-link">Don't have an account? <Link to="/signup">Sign Up</Link></p>
       </div>
-      <form className="login-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Login</button>
-        {error && <div className="error">{error}</div>}
-      </form>
     </div>
   );
 }
